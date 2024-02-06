@@ -52,3 +52,5 @@ To run this project locally, follow these steps:
 **Step 3**: Install dependencies by running the following command:
 ```bash
 pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
