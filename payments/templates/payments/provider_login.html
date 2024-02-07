@@ -1,0 +1,9 @@
+{% extends 'GetCode/base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% block title %}<title>provider_login</title>{% endblock %}
+{% block content %}
+
+<a href="{% provider_login_url 'nmbbank' %}">Login with NMB Bank</a>
+
+{% endblock %}

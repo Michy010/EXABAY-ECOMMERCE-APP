@@ -1,0 +1,13 @@
+{% extends 'GetCode/base.html' %}
+{% load static %}
+{% block title %}<title>Callback</title>{% endblock %}
+{% block content %}
+    <h1>OAuth Callback</h1>
+    {% if authenticated %}
+        <p>Congratulations! Authentication was successful.</p>
+        <!-- Additional content or actions for authenticated users -->
+    {% else %}
+        <p>Authentication failed. Please try again.</p>
+        <!-- Additional content or actions for failed authentication -->
+    {% endif %}
+{% endblock %}

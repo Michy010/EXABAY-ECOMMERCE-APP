@@ -1,0 +1,87 @@
+{% extends 'GetCode/base.html' %}
+{% load static %}
+{% block title %} <title>TradeCenter</title> {% endblock %}
+{% block content %}
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .profile-container {
+        text-align: right;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .seller-id {
+        font-size: 24px;
+        font-weight: bold;
+        color: #3498db; /* Blue color */
+    }
+
+    .user-name {
+        font-size: 18px;
+        margin-top: 8px;
+        color: #555;
+    }
+
+    h1 {
+        color: #2ecc71; /* Green color */
+        margin-top: 30px;
+    }
+
+    .copy-button {
+        cursor: pointer;
+        border: none;
+        background-color: #3498db; /* Blue color */
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        margin-left: 10px;
+    }
+
+    .trade-button {
+        cursor: pointer;
+        border: none;
+        background-color: #2ecc71;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        margin-top: 10px;
+        display: inline-block;
+        text-decoration: none;
+    }
+</style>
+
+<div class="profile-container">
+    <div class="seller-id">Seller's ID:</div><div class="seller-id" id="sellerId">{{ user_id }}</div>
+    <button class="copy-button" onclick="copyToClipboard()">Copy ID</button>
+    <div class="user-name">User Name: {{ request.user.username }}</div>
+</div>
+
+<h1>This is Your Trade Center</h1>
+
+<a href="#" class="trade-button">Trade Now</a>
+
+<script>
+    function copyToClipboard() {
+        var sellerIdElement = document.getElementById("sellerId");
+        var textArea = document.createElement("textarea");
+        textArea.value = sellerIdElement.innerText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Seller's ID copied to clipboard!");
+    }
+</script>
+
+{% endblock %}

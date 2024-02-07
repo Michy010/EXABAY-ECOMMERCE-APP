@@ -1,0 +1,123 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* Adjust size as needed */
+}
+
+.app-name {
+  font-size: 1.5em; /* Adjust size as needed */
+  margin-left: 10px; /* Adjust spacing as needed */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+}
+
+/* Main content styles */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.image-content img {
+  width: 100%; /* Make the image responsive */
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer-links ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.footer-links p {
+  font-weight: bold;
+}
+
+.social-links,
+.legal-links,
+.contact-info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-links a,
+.legal-links a,
+.contact-info a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Adjust spacing for the links */
+.social-links li,
+.legal-links li,
+.contact-info li {
+  margin: 5px;
+}
+
+.social-links,
+.legal-links,
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+.sign-up-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+  text-decoration: none;
+}
+.sign-up-btn a {
+  text-decoration: none;
+}
+

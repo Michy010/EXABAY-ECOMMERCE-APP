@@ -1,0 +1,14 @@
+{% extends 'GetCode/base.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <title>{% block title %}My Center{% endblock %}</title>
+    </head>
+    <h1>Welcome to Your Center, {{ request.user.username }}!</h1>
+    <div class="profile_info">
+        <p>Name: {{ username }}</p>
+        <p>Seller's Id: {{ unique_id }}</p>
+    </div>
+    <p>Welcome to GetCode trade on social medias safely. Your account, your premise.</p>
+    <a href="#"><button>Trade now</button></a>
+{% endblock %}
